@@ -1,12 +1,10 @@
 /**
 Generate and show a maze, using the simple Depth-first search algorithm.
 
-Start at a random cell.
-Mark the current cell as visited, and get a list of its neighbors. 
-For each neighbor, starting with a randomly selected neighbor:
-    If that neighbor hasn't been visited, remove the wall between this cell and that neighbor, and then recurse with 
-        that neighbor as the current cell.
- */
+First attempt at an algorithm in plain js.
+Attempted recursion doesn't work. Draws a wonky maze.
+
+*/
 
 let maze=[];
 let cell= {
@@ -28,7 +26,7 @@ let vc=0;                   // visit count for debugging
          maze[x,y]={
             visited:false,
             north: false,   // walls - assume all closed ie false
-            east: false,    // on second thoughts should really be true but life is short       
+            east: false,    // on second thoughts should really change to true       
             south: false,
             west: false,
         };;    
